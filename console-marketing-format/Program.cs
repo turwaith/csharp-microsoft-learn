@@ -39,13 +39,21 @@ namespace console_marketing_format
             decimal newProfit = 63000000.0m;
 
             // Your logic here
+            string greetingMessage = "";
+            greetingMessage =  $"Dear {customerName},\nAs a customer of our {currentProduct} offering we are excited to ";
+            greetingMessage += "tell you about a new financial product that would dramatically increase your return.";
+            greetingMessage += $"\n\nCurrentlty, you own {currentShares:N} shares at the return of {currentReturn:P}.";
+            greetingMessage += $"\n\nOur new product, {newProduct} offers a return of {newReturn:P2}.";
+            greetingMessage += $"  Given your current role, your potential profit would be {newProfit:C}\n";
+
+            Console.WriteLine(greetingMessage);
 
             Console.WriteLine("Here's a quick comparison:\n");
 
-            string comparrisonMessage = "";
+            string comparrisonMessage = $"{currentProduct.PadRight(20)}{currentReturn:p}{currentProfit,17:C}" +
+                                        $"\n{newProduct.PadRight(20)}{newReturn:p}{newProfit,17:C}";
 
             // Your logic here
-
             Console.WriteLine(comparrisonMessage);
         }
     }
