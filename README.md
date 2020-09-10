@@ -15,3 +15,4 @@ dotnet run --project [project-name]
 * console-reverse-string
 * console-rpg-duel
 * console-fraudulent-orders
+* console-marketing-format
